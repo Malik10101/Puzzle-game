@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<h1>Tic Tac Toe</h1>
+<h1>🎮 Tic Tac Toe</h1>
+
+<div class="controls">
+    <button onclick="toggleMode()">🌙 Toggle Mode</button>
+    <button onclick="toggleAI()">🤖 Play vs AI</button>
+</div>
+
+<div id="score"></div>
 
 <div class="game">
     <div class="cell" onclick="play(0)"></div>
@@ -23,7 +31,11 @@
 
 <p id="status">Player X Turn</p>
 
-<button onclick="resetGame()">Reset Game</button>
+<button onclick="resetGame()">🔄 Reset Game</button>
+
+<!-- Sounds -->
+<audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/3005/3005-preview.mp3"></audio>
+<audio id="winSound" src="https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3"></audio>
 
 <script src="./script.js"></script>
 </body>
